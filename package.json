@@ -1,15 +1,45 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "name": "react-webpack-scripts",
+  "version": "0.0.2",
+  "description": "Configuration and scripts for Create React App.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meitianyitan/react-webpack-scripts.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
   ],
+  "author": "Weich",
+  "bugs": {
+    "url": "https://github.com/meitianyitan/react-webpack-scripts/issues"
+  },
+  "homepage": "https://github.com/meitianyitan/react-webpack-scripts#readme",
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "bin",
+    "config",
+    "lib",
+    "scripts",
+    "template",
+    "template-typescript",
+    "utils"
+  ],
+  "bin": {
+    "react-webpack-scripts": "./bin/react-scripts.js"
+  },
+  "types": "./lib/react-app.d.ts",
   "scripts": {
     "build": "cd packages/react-scripts && node bin/react-scripts.js build"
   },
   "devDependencies": {
     "husky": "^1.2.0",
     "lerna": "^3.4.3",
-    "lint-staged": "^8.1.0"
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
   },
   "husky": {
     "hooks": {
@@ -24,5 +54,8 @@
     "yarn.lock": [
       "git rm --cached"
     ]
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5"
   }
 }
