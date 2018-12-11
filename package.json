@@ -7,11 +7,22 @@
     "build": "cd packages/react-scripts && node bin/react-scripts.js build"
   },
   "devDependencies": {
-    "lerna": "^3.4.3"
+    "husky": "^1.2.0",
+    "lerna": "^3.4.3",
+    "lint-staged": "^8.1.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,md,css,html}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
   }
 }
