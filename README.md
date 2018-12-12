@@ -1,2 +1,3 @@
 # react-webpack-scripts
-Set up a modern web app by running one command.
+
+Configuration and scripts for Create React App.
